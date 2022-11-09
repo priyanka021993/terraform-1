@@ -10,8 +10,8 @@ variable "server_names" {
 
 resource "aws_instance" "myawsserver" {
   ami = "ami-0603cbe34fd08cb81"
-  instance_type = "t2.micro"
-  key_name = "test1"
+  instance_type = "t2.nano"
+ # key_name = "test1"
   for_each = toset(var.server_names)
   tags = {
     Name = each.value

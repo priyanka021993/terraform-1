@@ -1,6 +1,6 @@
 resource "aws_instance" "myawsserver1" {
   ami = "ami-0c94855ba95c71c99"
-  instance_type = "t2.micro"
+  instance_type = "t2.nano"
   provider = aws.useast1
   tags = {
     Name = "Techlanders-aws-ec2-instance1"
@@ -15,7 +15,7 @@ output "myawsserver1-ip" {
 resource "aws_instance" "myawsserver2" {
   ami = "ami-0603cbe34fd08cb81"
   provider = aws.useast2
-  instance_type = "t2.micro"
+  instance_type = "t2.nano"
 
   tags = {
     Name = "Techlanders-aws-ec2-instance2"
